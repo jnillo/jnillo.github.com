@@ -1,7 +1,20 @@
 /*Blocks Home: */
 
 .block{min-height:50em;}
-.start_block{background-color:white;}
+.start_block{
+             background:white url(../images/bgs/cabeceraBlog.jpg) no-repeat 0 0;
+             background-size:100%;
+             padding-top:3em;
+            }
+
+.start_block ul.main_nav{font-family: Helvetica;font-size: 2em;font-weight:bold;list-style:none;padding:0;margin:0;}
+.start_block ul.main_nav a{color:white;}
+.start_block ul.main_nav li{background-color:#444444;margin-bottom: 0.1em;padding:0.5em 0;padding-left:0.5em}
+.start_block ul.main_nav li.first{width:40%}
+.start_block ul.main_nav li.second{width:37%;}
+.start_block ul.main_nav li.third{width:34%;}
+.start_block ul.main_nav li.fourth{width:31%}
+
 .technology_block{background-color: red;}
 .projects_block{background-color: grey}
 .contact_block{background-color:blue}

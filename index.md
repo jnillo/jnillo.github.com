@@ -4,7 +4,12 @@ title:  Juan Vázquez
 ---
 
 <div id="start" class="block start_block">
-    <h1>HEAD PAGE</h1>    
+    <ul class="main_nav">
+      <li class="nav_link first"><a href="#technology" title="Tecnologías">Tecnolog&iacute;as</a></li>
+      <li class="nav_link second"><a href="#projects" title="Proyectos">Proyectos</a></li>
+      <li class="nav_link third"><a href="/blog" title="Blog" >Blog</a></li>
+      <li class="nav_link fourth"><a href="#contact" tile="Contacto">Contacto</a></li>
+    </ul>   
 </div>
 <div id="technology" class="block technology_block">
   <h2> Techonology <a href="#start">(UP)</a></h2>
