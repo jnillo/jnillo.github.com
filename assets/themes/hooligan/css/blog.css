@@ -1,3 +1,6 @@
+.page-header{display:none !important;}
+.container{width:100%;}
+.span12{width:100%;}
 /*Blocks Home: */
 
 .block{min-height:50em;}
@@ -6,8 +9,9 @@
              background-size:100%;
              padding-top:3em;
             }
+.start_block .canvas_block{display:block;overflow:hidden;width:100%;min-height:50em;z-index:1}
 
-.start_block ul.main_nav{font-family: Helvetica;font-size: 2em;font-weight:bold;list-style:none;padding:0;margin:0;}
+.start_block ul.main_nav{font-family: Helvetica;font-size: 2em;font-weight:bold;list-style:none;padding:0;margin:0;z-index:100;position:absolute; width:100%}
 .start_block ul.main_nav a{color:white;}
 .start_block ul.main_nav li{background-color:#444444;margin-bottom: 0.1em;padding:0.5em 0;padding-left:0.5em}
 .start_block ul.main_nav li.first{width:40%}

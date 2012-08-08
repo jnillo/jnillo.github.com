@@ -9,12 +9,12 @@ pygments: true
 # Themes are encouraged to use these universal variables 
 # so be sure to set them if your theme uses them.
 #
-title : Jnillo Kun-fu 
+title : Juan Vázquez 
 tagline: Site Tagline
 author :
   name : Juan Vázquez
   email : jnillo9@gmail.com
-  linkedin: es.linkedin.com/in/juanvazquezmurga
+  linkedin: juanvazquezmurga
   github : jnillo
   twitter : jnillo9
 #  feedburner : feedname

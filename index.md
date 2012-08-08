@@ -1,6 +1,5 @@
 ---
 layout: page
-title:  Juan Vázquez
 ---
 
 <div id="start" class="block start_block">
@@ -10,6 +9,7 @@ title:  Juan Vázquez
       <li class="nav_link third"><a href="/blog" title="Blog" >Blog</a></li>
       <li class="nav_link fourth"><a href="#contact" tile="Contacto">Contacto</a></li>
     </ul>   
+    <div class="canvas_block" id="canvas_block"> </div>
 </div>
 <div id="technology" class="block technology_block">
   <h2> Techonology <a href="#start">(UP)</a></h2>
@@ -25,7 +25,7 @@ title:  Juan Vázquez
     <ul>
       <li> name : {{site.author.name}}</li>
       <li> email : {{site.author.email}}</li>
-      <li> linkedin: {{site.author.linkedin}}</li>
+      <li> linkedin: http://www.linkedin.com/in/{{ site.author.linkedin }}</li>
       <li> github : {{site.author.github}}</li>
       <li> twitter : {{site.author.twitter}}</li>
   
