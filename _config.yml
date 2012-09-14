@@ -1,6 +1,6 @@
 # This is the default format. 
 # For more see: https://github.com/mojombo/jekyll/wiki/Permalinks
-permalink: /:categories/:year/:month/:day/:title 
+permalink: /:year-:month-:day/:title 
 
 exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md"]
 auto: true
@@ -9,14 +9,23 @@ pygments: true
 # Themes are encouraged to use these universal variables 
 # so be sure to set them if your theme uses them.
 #
-title : Jekyll Bootstrap
+title : Jnillo Kun-fu 
 tagline: Site Tagline
 author :
   name : Juan Vázquez
   email : jnillo9@gmail.com
+  linkedin: es.linkedin.com/in/juanvazquezmurga
   github : jnillo
   twitter : jnillo9
 #  feedburner : feedname
+
+pages: 
+  technology:
+    title: Tecnologías
+    url: "#"
+  contact:
+    title: Contacto
+    url: "#"
 
 # The production_url is only used when full-domain names are needed
 # such as sitemap.txt 
@@ -116,8 +125,8 @@ JB :
   # Settings for all other include helpers can be defined by creating 
   # a hash with key named for the given helper. ex:
   #
-  #   pages_list :
-  #     provider : "custom"   
+#pages_list :
+#  provider : "custom"
   #
   # Setting any helper's provider to 'custom' will bypass the helper code
   # and include your custom code. Your custom file must be defined at:

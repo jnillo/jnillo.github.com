@@ -1,0 +1,7 @@
+/*Blocks Home: */
+
+.block{min-height:50em;}
+.start_block{background-color:white;}
+.technology_block{background-color: red;}
+.projects_block{background-color: grey}
+.contact_block{background-color:blue}

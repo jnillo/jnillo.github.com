@@ -18,7 +18,6 @@ Usage:
   	i.e. site.tags.cool_tag (this returns an array of posts tagged: cool_tag)
   	
   This helper can be seen in use at: ../_layouts/default.html
--->{% endcomment %}
 
 {% if site.JB.pages_list.provider == "custom" %}
   {% include custom/pages_list %}
@@ -37,3 +36,9 @@ Usage:
 {% endif %}
 {% assign pages_list = nil %}
 {% assign group = nil %}
+-->{% endcomment %}
+
+<li><a href="#technology">Tecnologías</a></li>
+<li><a href="#projects">Proyectos</a></li>
+<li><a href="{{ BASE_PATH }}/blog">Blog</a></li>
+<li><a href="#contact">Contacto</a></li>
