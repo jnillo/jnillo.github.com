@@ -1,0 +1,16 @@
+.infoSide {
+  background-color: #ccc;
+  padding: 3em 0;
+  height: 1000px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  .authorInfo {
+    text-align: center;
+    .authorImg {
+      border-color: #d4d4d4;
+      border-radius: 50%;
+      width: 150px;
+    }
+  }
+}
