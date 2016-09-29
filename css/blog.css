@@ -5817,7 +5817,7 @@ button.close {
 .infoSide {
   background-color: #ccc;
   padding: 3em 0;
-  height: 1000px;
+  height: 2000px;
   position: fixed;
   left: 0;
   top: 0; }
@@ -5827,6 +5827,22 @@ button.close {
       border-color: #d4d4d4;
       border-radius: 50%;
       width: 150px; }
+    .infoSide .authorInfo .socialLinks {
+      margin-top: 3em; }
+      .infoSide .authorInfo .socialLinks li > a {
+        background-size: cover;
+        display: block;
+        height: 28px;
+        margin: 0 .5em;
+        width: 28px; }
+    .infoSide .authorInfo .twitterLink a {
+      background-image: url(../img/twitter.png); }
+    .infoSide .authorInfo .githubLink a {
+      background-image: url(../img/github.png); }
+    .infoSide .authorInfo .linkedInLink a {
+      background-image: url(../img/linkedin.png); }
+    .infoSide .authorInfo .contactLink a {
+      background-image: url(../img/contact.png); }
 
 .navbar {
   height: 100px;
@@ -5840,6 +5856,10 @@ button.close {
       margin: 0 1em; }
       .navbar ul.nav li:first-child {
         margin-left: 0; }
+
+.footer {
+  position: fixed;
+  bottom: 0; }
 
 .content {
   margin-left: 25%; }

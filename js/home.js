@@ -245,22 +245,32 @@ var HomePage = function (_React$Component) {
               'Senior software developer'
             ),
             _react2.default.createElement(
+              'p',
+              null,
+              'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
+            ),
+            _react2.default.createElement(
               'ul',
-              { className: 'list-unstyled socialLinks' },
+              { className: 'list-inline socialLinks' },
               _react2.default.createElement(
                 'li',
-                null,
-                'Twitter'
+                { className: 'twitterLink' },
+                _react2.default.createElement('a', { href: 'http://www.twitter.com/jnillo9', rel: 'no-follow', target: '_blank' })
               ),
               _react2.default.createElement(
                 'li',
-                null,
-                'GitHub'
+                { className: 'githubLink' },
+                _react2.default.createElement('a', { href: 'http://github.com/jnillo', rel: 'no-follow', target: '_blank' })
               ),
               _react2.default.createElement(
                 'li',
-                null,
-                'LinkedIn'
+                { className: 'linkedInLink' },
+                _react2.default.createElement('a', { href: 'http://es.linkedin.com/in/juanvazquezmurga', rel: 'no-follow', target: '_blank' })
+              ),
+              _react2.default.createElement(
+                'li',
+                { className: 'contactLink' },
+                _react2.default.createElement('a', { href: '/contact' })
               )
             )
           )

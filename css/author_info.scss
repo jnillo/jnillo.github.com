@@ -1,7 +1,7 @@
 .infoSide {
   background-color: #ccc;
   padding: 3em 0;
-  height: 1000px;
+  height: 2000px;
   position: fixed;
   left: 0;
   top: 0;
@@ -11,6 +11,28 @@
       border-color: #d4d4d4;
       border-radius: 50%;
       width: 150px;
+    }
+    .socialLinks {
+      margin-top: 3em;
+      li > a {
+        background-size: cover;
+        display: block;
+        height: 28px;
+        margin: 0 .5em;
+        width: 28px;
+      }
+    }
+    .twitterLink a{
+      background-image: url(../img/twitter.png);
+    }
+    .githubLink a{
+      background-image: url(../img/github.png);
+    }
+    .linkedInLink a{
+      background-image: url(../img/linkedin.png);
+    }
+    .contactLink a{
+      background-image: url(../img/contact.png);
     }
   }
 }
