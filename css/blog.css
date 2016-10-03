@@ -5859,7 +5859,8 @@ button.close {
 
 .footer {
   position: fixed;
-  bottom: 0; }
+  bottom: 0;
+  text-align: right; }
 
 .content {
   margin-left: 25%; }
