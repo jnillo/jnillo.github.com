@@ -1,0 +1,26 @@
+#blog-posts{
+  .categories-list {
+    margin: 1em 0;
+    height: 20px;
+    li {
+      cursor: pointer;
+      font-weight: 600;
+      margin-right: 20px;;
+    }
+  }
+  .post {
+    margin: 3em 0;
+    .post-title {
+      font-family: 'courier' !important;
+      font-size: 28px;
+      line-height: 1.15em;
+      cursor: pointer;
+    }
+    ul {
+      font-family: 'courier';
+      .category-link {
+      	cursor: pointer;
+      }
+    }
+  }
+}

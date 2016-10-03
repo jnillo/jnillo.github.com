@@ -14,24 +14,37 @@
     }
     .socialLinks {
       margin-top: 3em;
-      li > a {
-        background-size: cover;
-        display: block;
-        height: 28px;
-        margin: 0 .5em;
-        width: 28px;
+      position: fixed;
+      bottom: 0;
+      margin: 1em auto;
+      width: 25%;
+      li {
+        a {
+          color: black;
+          &:hover, &:visited, &:active {
+            color: black;
+          }
+          span {
+            background-size: cover;
+            display: block;
+            float: left;
+            height: 18px;
+            margin: 0 .5em;
+            width: 18px;
+          }
+        }
       }
     }
-    .twitterLink a{
+    .twitterLink a span{
       background-image: url(../img/twitter.png);
     }
-    .githubLink a{
+    .githubLink a span{
       background-image: url(../img/github.png);
     }
-    .linkedInLink a{
+    .linkedInLink a span{
       background-image: url(../img/linkedin.png);
     }
-    .contactLink a{
+    .contactLink a span{
       background-image: url(../img/contact.png);
     }
   }

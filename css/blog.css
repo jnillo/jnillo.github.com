@@ -5828,20 +5828,29 @@ button.close {
       border-radius: 50%;
       width: 150px; }
     .infoSide .authorInfo .socialLinks {
-      margin-top: 3em; }
-      .infoSide .authorInfo .socialLinks li > a {
-        background-size: cover;
-        display: block;
-        height: 28px;
-        margin: 0 .5em;
-        width: 28px; }
-    .infoSide .authorInfo .twitterLink a {
+      margin-top: 3em;
+      position: fixed;
+      bottom: 0;
+      margin: 1em auto;
+      width: 25%; }
+      .infoSide .authorInfo .socialLinks li a {
+        color: black; }
+        .infoSide .authorInfo .socialLinks li a:hover, .infoSide .authorInfo .socialLinks li a:visited, .infoSide .authorInfo .socialLinks li a:active {
+          color: black; }
+        .infoSide .authorInfo .socialLinks li a span {
+          background-size: cover;
+          display: block;
+          float: left;
+          height: 18px;
+          margin: 0 .5em;
+          width: 18px; }
+    .infoSide .authorInfo .twitterLink a span {
       background-image: url(../img/twitter.png); }
-    .infoSide .authorInfo .githubLink a {
+    .infoSide .authorInfo .githubLink a span {
       background-image: url(../img/github.png); }
-    .infoSide .authorInfo .linkedInLink a {
+    .infoSide .authorInfo .linkedInLink a span {
       background-image: url(../img/linkedin.png); }
-    .infoSide .authorInfo .contactLink a {
+    .infoSide .authorInfo .contactLink a span {
       background-image: url(../img/contact.png); }
 
 .navbar {
@@ -5850,10 +5859,22 @@ button.close {
   margin: 0;
   width: 100%; }
   .navbar ul.nav {
+    background-color: #222;
+    colour: white;
     margin: 0;
-    padding: 0; }
+    padding: 0;
+    width: 100%; }
     .navbar ul.nav li {
       margin: 0 1em; }
+      .navbar ul.nav li a {
+        color: white;
+        padding: 5px; }
+        .navbar ul.nav li a:hover {
+          color: #222;
+          background: white; }
+      .navbar ul.nav li:hover {
+        border-bottom: 2px #222 solid;
+        margin-bottom: -2px; }
       .navbar ul.nav li:first-child {
         margin-left: 0; }
 
@@ -5861,6 +5882,26 @@ button.close {
   position: fixed;
   bottom: 0;
   text-align: right; }
+
+#blog-posts .categories-list {
+  margin: 1em 0;
+  height: 20px; }
+  #blog-posts .categories-list li {
+    cursor: pointer;
+    font-weight: 600;
+    margin-right: 20px; }
+
+#blog-posts .post {
+  margin: 3em 0; }
+  #blog-posts .post .post-title {
+    font-family: 'courier' !important;
+    font-size: 28px;
+    line-height: 1.15em;
+    cursor: pointer; }
+  #blog-posts .post ul {
+    font-family: 'courier'; }
+    #blog-posts .post ul .category-link {
+      cursor: pointer; }
 
 .content {
   margin-left: 25%; }

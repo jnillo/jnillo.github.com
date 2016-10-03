@@ -81,22 +81,32 @@ var AuthorInfo = function (_React$Component) {
             _react2.default.createElement(
               "li",
               { className: "twitterLink" },
-              _react2.default.createElement("a", { href: "http://www.twitter.com/jnillo9", rel: "no-follow", target: "_blank" })
+              _react2.default.createElement(
+                "a",
+                { href: "http://www.twitter.com/jnillo9", rel: "no-follow", target: "_blank" },
+                _react2.default.createElement("span", null),
+                "Twitter"
+              )
             ),
             _react2.default.createElement(
               "li",
               { className: "githubLink" },
-              _react2.default.createElement("a", { href: "http://github.com/jnillo", rel: "no-follow", target: "_blank" })
+              _react2.default.createElement(
+                "a",
+                { href: "http://github.com/jnillo", rel: "no-follow", target: "_blank" },
+                _react2.default.createElement("span", null),
+                "Github"
+              )
             ),
             _react2.default.createElement(
               "li",
               { className: "linkedInLink" },
-              _react2.default.createElement("a", { href: "http://es.linkedin.com/in/juanvazquezmurga", rel: "no-follow", target: "_blank" })
-            ),
-            _react2.default.createElement(
-              "li",
-              { className: "contactLink" },
-              _react2.default.createElement("a", { href: "/contact" })
+              _react2.default.createElement(
+                "a",
+                { href: "http://es.linkedin.com/in/juanvazquezmurga", rel: "no-follow", target: "_blank" },
+                _react2.default.createElement("span", null),
+                "LinkedIn"
+              )
             )
           )
         )
@@ -191,19 +201,19 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 var posts = [{
-  title: 'Post 1',
+  title: 'No temas ser un inadaptado, teme no serlo',
   category: 'Category 1',
-  created: '20 - 12 - 2016',
+  created: '20 / 12 / 2016',
   content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
 }, {
-  title: 'Post 2',
+  title: 'Recursos, inquietudes y un salto al vacío',
   category: 'Category 2',
-  created: '20 - 12 - 2016',
+  created: '20 / 12 / 2016',
   content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
 }, {
-  title: 'Post 3',
+  title: 'Prototipado: construyendo mejores aplicaciones.',
   category: 'Category 3',
-  created: '20 - 12 - 2016',
+  created: '20 / 12 / 2016',
   content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
 }];
 
@@ -474,7 +484,8 @@ var Post = function (_React$Component) {
         { className: "post" },
         _react2.default.createElement(
           "h3",
-          null,
+          { className: "post-title" },
+          "> ",
           this.props.post.title
         ),
         _react2.default.createElement(
@@ -578,6 +589,30 @@ var Posts = function (_React$Component) {
       return _react2.default.createElement(
         'div',
         { id: 'blog-posts' },
+        _react2.default.createElement(
+          'ul',
+          { className: 'list-inline categories-list' },
+          _react2.default.createElement(
+            'li',
+            { onClick: this.setCategory, 'data-category': 'All' },
+            '#All'
+          ),
+          _react2.default.createElement(
+            'li',
+            { onClick: this.setCategory, 'data-category': 'Category 1' },
+            '#Category 1'
+          ),
+          _react2.default.createElement(
+            'li',
+            { onClick: this.setCategory, 'data-category': 'Category 2' },
+            '#Category 2'
+          ),
+          _react2.default.createElement(
+            'li',
+            { onClick: this.setCategory, 'data-category': 'Category 3' },
+            '#Category 3'
+          )
+        ),
         this.renderPosts(this.postsByCategory(this.props.posts, this.state.category), this.setCategory)
       );
     }
