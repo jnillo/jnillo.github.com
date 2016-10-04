@@ -6,21 +6,37 @@
   left: 0;
   top: 0;
   .authorInfo {
+    padding: 0 .5em;
     text-align: center;
     .authorImg {
       border-color: #d4d4d4;
       border-radius: 50%;
       width: 150px;
     }
+    button {
+      color: black;
+      margin: 2em;
+      width: 180px;
+      background-color: transparent;
+      border-radius: 30px;
+      border: 2px black solid;
+      box-shadow: none;
+      padding: 10px 25px;
+      &:hover {
+        background: black;
+        color: white;
+      }
+    }
     .socialLinks {
       margin-top: 3em;
       position: fixed;
       bottom: 0;
       margin: 1em auto;
-      width: 25%;
+      width: 23%;
       li {
         a {
           color: black;
+          cursor: pointer;
           &:hover, &:visited, &:active {
             color: black;
           }

@@ -73,7 +73,12 @@ var AuthorInfo = function (_React$Component) {
           _react2.default.createElement(
             "p",
             null,
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+            "#RubyOnRails #Ruby #ReactJS #Mysql #Postgres #Backend #FullStack"
+          ),
+          _react2.default.createElement(
+            "button",
+            { value: "Contact" },
+            "Contact"
           ),
           _react2.default.createElement(
             "ul",
@@ -215,6 +220,36 @@ var posts = [{
   category: 'Category 3',
   created: '20 / 12 / 2016',
   content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
+}, {
+  title: 'No temas ser un inadaptado, teme no serlo2',
+  category: 'Category 1',
+  created: '20 / 12 / 2016',
+  content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
+}, {
+  title: 'Recursos, inquietudes y un salto al vacío2',
+  category: 'Category 2',
+  created: '20 / 12 / 2016',
+  content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
+}, {
+  title: 'Prototipado: construyendo mejores aplicaciones.2',
+  category: 'Category 3',
+  created: '20 / 12 / 2016',
+  content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
+}, {
+  title: 'No temas ser un inadaptado, teme no serlo3',
+  category: 'Category 1',
+  created: '20 / 12 / 2016',
+  content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
+}, {
+  title: 'Recursos, inquietudes y un salto al vacío3',
+  category: 'Category 2',
+  created: '20 / 12 / 2016',
+  content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
+}, {
+  title: 'Prototipado: construyendo mejores aplicaciones.3',
+  category: 'Category 3',
+  created: '20 / 12 / 2016',
+  content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
 }];
 
 var HomeBody = function (_React$Component) {
@@ -285,7 +320,30 @@ var HomeHeader = function (_React$Component) {
       return _react2.default.createElement(
         'div',
         { className: 'header' },
-        _react2.default.createElement(_main_navbar2.default, null)
+        _react2.default.createElement(
+          'ul',
+          { className: 'list-inline categories-list' },
+          _react2.default.createElement(
+            'li',
+            { onClick: this.setCategory, 'data-category': 'All' },
+            '#All'
+          ),
+          _react2.default.createElement(
+            'li',
+            { onClick: this.setCategory, 'data-category': 'Category 1' },
+            '#Category 1'
+          ),
+          _react2.default.createElement(
+            'li',
+            { onClick: this.setCategory, 'data-category': 'Category 2' },
+            '#Category 2'
+          ),
+          _react2.default.createElement(
+            'li',
+            { onClick: this.setCategory, 'data-category': 'Category 3' },
+            '#Category 3'
+          )
+        )
       );
     }
   }]);
@@ -447,7 +505,7 @@ var MainNavbar = function (_React$Component) {
 exports.default = MainNavbar;
 
 },{"react":180}],8:[function(require,module,exports){
-"use strict";
+'use strict';
 
 Object.defineProperty(exports, "__esModule", {
   value: true
@@ -455,7 +513,7 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _react = require("react");
+var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
@@ -477,33 +535,34 @@ var Post = function (_React$Component) {
   }
 
   _createClass(Post, [{
-    key: "render",
+    key: 'render',
     value: function render() {
+      var postClass = this.props.lastPost ? 'post last' : 'post';
       return _react2.default.createElement(
-        "div",
-        { className: "post" },
+        'div',
+        { className: postClass },
         _react2.default.createElement(
-          "h3",
-          { className: "post-title" },
-          "> ",
+          'h3',
+          { className: 'post-title' },
+          ' ',
           this.props.post.title
         ),
         _react2.default.createElement(
-          "ul",
-          { className: "list-inline" },
+          'ul',
+          { className: 'list-inline' },
           _react2.default.createElement(
-            "li",
-            { className: "category-link", onClick: this.props.setCategory, "data-category": this.props.post.category },
+            'li',
+            { className: 'category-link', onClick: this.props.setCategory, 'data-category': this.props.post.category },
             this.props.post.category
           ),
           _react2.default.createElement(
-            "li",
-            { className: "pull-right" },
+            'li',
+            { className: 'pull-right' },
             this.props.post.created
           )
         ),
         _react2.default.createElement(
-          "p",
+          'p',
           null,
           this.props.post.content
         )
@@ -575,7 +634,7 @@ var Posts = function (_React$Component) {
     key: 'renderPosts',
     value: function renderPosts(posts, setCategory) {
       return posts.map(function (post) {
-        return _react2.default.createElement(_post2.default, { post: post, key: post.title, setCategory: setCategory });
+        return _react2.default.createElement(_post2.default, { post: post, key: post.title, setCategory: setCategory, lastPost: posts[0] == post });
       });
     }
   }, {
@@ -589,30 +648,6 @@ var Posts = function (_React$Component) {
       return _react2.default.createElement(
         'div',
         { id: 'blog-posts' },
-        _react2.default.createElement(
-          'ul',
-          { className: 'list-inline categories-list' },
-          _react2.default.createElement(
-            'li',
-            { onClick: this.setCategory, 'data-category': 'All' },
-            '#All'
-          ),
-          _react2.default.createElement(
-            'li',
-            { onClick: this.setCategory, 'data-category': 'Category 1' },
-            '#Category 1'
-          ),
-          _react2.default.createElement(
-            'li',
-            { onClick: this.setCategory, 'data-category': 'Category 2' },
-            '#Category 2'
-          ),
-          _react2.default.createElement(
-            'li',
-            { onClick: this.setCategory, 'data-category': 'Category 3' },
-            '#Category 3'
-          )
-        ),
         this.renderPosts(this.postsByCategory(this.props.posts, this.state.category), this.setCategory)
       );
     }

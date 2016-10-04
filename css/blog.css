@@ -5822,19 +5822,33 @@ button.close {
   left: 0;
   top: 0; }
   .infoSide .authorInfo {
+    padding: 0 .5em;
     text-align: center; }
     .infoSide .authorInfo .authorImg {
       border-color: #d4d4d4;
       border-radius: 50%;
       width: 150px; }
+    .infoSide .authorInfo button {
+      color: black;
+      margin: 2em;
+      width: 180px;
+      background-color: transparent;
+      border-radius: 30px;
+      border: 2px black solid;
+      box-shadow: none;
+      padding: 10px 25px; }
+      .infoSide .authorInfo button:hover {
+        background: black;
+        color: white; }
     .infoSide .authorInfo .socialLinks {
       margin-top: 3em;
       position: fixed;
       bottom: 0;
       margin: 1em auto;
-      width: 25%; }
+      width: 23%; }
       .infoSide .authorInfo .socialLinks li a {
-        color: black; }
+        color: black;
+        cursor: pointer; }
         .infoSide .authorInfo .socialLinks li a:hover, .infoSide .authorInfo .socialLinks li a:visited, .infoSide .authorInfo .socialLinks li a:active {
           color: black; }
         .infoSide .authorInfo .socialLinks li a span {
@@ -5883,23 +5897,33 @@ button.close {
   bottom: 0;
   text-align: right; }
 
-#blog-posts .categories-list {
-  margin: 1em 0;
+.categories-list {
+  margin: 1em 1.5%;
   height: 20px; }
-  #blog-posts .categories-list li {
+  .categories-list li:first-child {
+    padding-left: 0px; }
+  .categories-list li {
     cursor: pointer;
     font-weight: 600;
     margin-right: 20px; }
 
 #blog-posts .post {
-  margin: 3em 0; }
+  border-bottom: 2px #D4D7D7 solid;
+  color: #323F69;
+  float: left;
+  margin: 0 1.5%;
+  padding: 15px 0px;
+  width: 30%; }
+  #blog-posts .post.last {
+    width: 97%; }
   #blog-posts .post .post-title {
-    font-family: 'courier' !important;
-    font-size: 28px;
-    line-height: 1.15em;
-    cursor: pointer; }
+    color: #323F69;
+    cursor: pointer;
+    font-size: 18px;
+    font-size: 20px;
+    line-height: 1.15em; }
   #blog-posts .post ul {
-    font-family: 'courier'; }
+    font-size: 12px; }
     #blog-posts .post ul .category-link {
       cursor: pointer; }
 
