@@ -214,7 +214,7 @@ var posts = [{
   title: 'Recursos, inquietudes y un salto al vacío',
   category: 'Category 2',
   created: '20 / 12 / 2016',
-  content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
+  content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
 }, {
   title: 'Prototipado: construyendo mejores aplicaciones.',
   category: 'Category 3',
@@ -224,7 +224,7 @@ var posts = [{
   title: 'No temas ser un inadaptado, teme no serlo2',
   category: 'Category 1',
   created: '20 / 12 / 2016',
-  content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
+  content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
 }, {
   title: 'Recursos, inquietudes y un salto al vacío2',
   category: 'Category 2',
@@ -267,7 +267,7 @@ var HomeBody = function (_React$Component) {
       return _react2.default.createElement(
         'div',
         { className: 'mainContent' },
-        _react2.default.createElement(_posts2.default, { posts: posts })
+        _react2.default.createElement(_posts2.default, { posts: posts, category: this.props.category, setCategory: this.props.setCategory })
       );
     }
   }]);
@@ -321,26 +321,31 @@ var HomeHeader = function (_React$Component) {
         'div',
         { className: 'header' },
         _react2.default.createElement(
+          'h2',
+          { className: 'section-title' },
+          'Blog'
+        ),
+        _react2.default.createElement(
           'ul',
           { className: 'list-inline categories-list' },
           _react2.default.createElement(
             'li',
-            { onClick: this.setCategory, 'data-category': 'All' },
+            { onClick: this.props.setCategory, 'data-category': 'All' },
             '#All'
           ),
           _react2.default.createElement(
             'li',
-            { onClick: this.setCategory, 'data-category': 'Category 1' },
-            '#Category 1'
+            { onClick: this.props.setCategory, 'data-category': 'Category 1' },
+            '#Category 21'
           ),
           _react2.default.createElement(
             'li',
-            { onClick: this.setCategory, 'data-category': 'Category 2' },
+            { onClick: this.props.setCategory, 'data-category': 'Category 2' },
             '#Category 2'
           ),
           _react2.default.createElement(
             'li',
-            { onClick: this.setCategory, 'data-category': 'Category 3' },
+            { onClick: this.props.setCategory, 'data-category': 'Category 3' },
             '#Category 3'
           )
         )
@@ -354,7 +359,10 @@ var HomeHeader = function (_React$Component) {
 exports.default = HomeHeader;
 
 
-HomeHeader.propTypes = {};
+HomeHeader.propTypes = {
+  setCategory: _react2.default.PropTypes.func.isRequired,
+  category: _react2.default.PropTypes.string.isRequired
+};
 
 },{"./main_navbar.jsx":7,"react":180}],6:[function(require,module,exports){
 'use strict';
@@ -396,13 +404,22 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 var HomePage = function (_React$Component) {
   _inherits(HomePage, _React$Component);
 
-  function HomePage() {
+  function HomePage(props) {
     _classCallCheck(this, HomePage);
 
-    return _possibleConstructorReturn(this, (HomePage.__proto__ || Object.getPrototypeOf(HomePage)).apply(this, arguments));
+    var _this = _possibleConstructorReturn(this, (HomePage.__proto__ || Object.getPrototypeOf(HomePage)).call(this, props));
+
+    _this.state = { category: 'All' };
+    _this.setCategory = _this.setCategory.bind(_this);
+    return _this;
   }
 
   _createClass(HomePage, [{
+    key: 'setCategory',
+    value: function setCategory(event) {
+      this.setState({ category: event.target.getAttribute('data-category') });
+    }
+  }, {
     key: 'render',
     value: function render() {
       return _react2.default.createElement(
@@ -412,8 +429,8 @@ var HomePage = function (_React$Component) {
         _react2.default.createElement(
           'div',
           { className: 'content col-md-9' },
-          _react2.default.createElement(_home_header2.default, null),
-          _react2.default.createElement(_home_body2.default, null),
+          _react2.default.createElement(_home_header2.default, { category: this.state.category, setCategory: this.setCategory }),
+          _react2.default.createElement(_home_body2.default, { category: this.state.category, setCategory: this.setCategory }),
           _react2.default.createElement(_footer2.default, null)
         )
       );
@@ -614,7 +631,6 @@ var Posts = function (_React$Component) {
 
     var _this = _possibleConstructorReturn(this, (Posts.__proto__ || Object.getPrototypeOf(Posts)).call(this, props));
 
-    _this.state = { category: 'All' };
     _this.setCategory = _this.setCategory.bind(_this);
     return _this;
   }
@@ -648,7 +664,7 @@ var Posts = function (_React$Component) {
       return _react2.default.createElement(
         'div',
         { id: 'blog-posts' },
-        this.renderPosts(this.postsByCategory(this.props.posts, this.state.category), this.setCategory)
+        this.renderPosts(this.postsByCategory(this.props.posts, this.props.category), this.props.setCategory)
       );
     }
   }]);
@@ -660,7 +676,9 @@ exports.default = Posts;
 
 
 Posts.propTypes = {
-  posts: _react2.default.PropTypes.array
+  posts: _react2.default.PropTypes.array,
+  category: _react2.default.PropTypes.string,
+  setCategory: _react2.default.PropTypes.func.isRequired
 };
 
 },{"./post.jsx":8,"react":180}],10:[function(require,module,exports){

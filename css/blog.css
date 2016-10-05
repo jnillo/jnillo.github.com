@@ -5898,7 +5898,7 @@ button.close {
   text-align: right; }
 
 .categories-list {
-  margin: 1em 1.5%;
+  margin: 2em 1.5% 0 1.5%;
   height: 20px; }
   .categories-list li:first-child {
     padding-left: 0px; }
@@ -5929,3 +5929,8 @@ button.close {
 
 .content {
   margin-left: 25%; }
+
+.section-title {
+  font-weight: bold;
+  font-size: 100px;
+  padding-left: 7px; }
