@@ -6,9 +6,14 @@
 
 @import 'posts';
 
+body {
+  background: #f9f9f9 url(../img/subtle_dots.png) repeat;
+}
+
 .content {
   margin-left: 25%;
 }
+
 .section-title {
   font-weight: bold;
   font-size: 100px;
