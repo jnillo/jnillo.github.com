@@ -7,13 +7,19 @@
   li {
     cursor: pointer;
     font-weight: 600;
-    margin-right: 20px;;
+    margin-right: 20px;
+    &.active {
+      background-color: #000;
+      color: white;
+      padding: 3px 30px;
+      border-radius: 25px;
+    }
   }
 }
 #blog-posts{
   .post {
     border-bottom: 2px #D4D7D7 solid;
-    color: #323F69;
+    color: #000;
     float:left;
     margin: 0 1.5%;
     padding: 15px 0px;
@@ -22,7 +28,7 @@
       width: 97%;
     }
     .post-title {
-      color: #323F69;
+      color: #000;
       cursor: pointer;
       font-size: 18px;
       font-size: 20px;

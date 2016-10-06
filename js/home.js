@@ -315,6 +315,12 @@ var HomeHeader = function (_React$Component) {
   }
 
   _createClass(HomeHeader, [{
+    key: 'active',
+    value: function active(selected, category) {
+      console.log(selected, category);
+      return selected == category ? 'active' : null;
+    }
+  }, {
     key: 'render',
     value: function render() {
       return _react2.default.createElement(
@@ -330,22 +336,22 @@ var HomeHeader = function (_React$Component) {
           { className: 'list-inline categories-list' },
           _react2.default.createElement(
             'li',
-            { onClick: this.props.setCategory, 'data-category': 'All' },
+            { className: this.active(this.props.category, "All"), onClick: this.props.setCategory, 'data-category': 'All' },
             '#All'
           ),
           _react2.default.createElement(
             'li',
-            { onClick: this.props.setCategory, 'data-category': 'Category 1' },
+            { className: this.active(this.props.category, "Category 1"), onClick: this.props.setCategory, 'data-category': 'Category 1' },
             '#Category 21'
           ),
           _react2.default.createElement(
             'li',
-            { onClick: this.props.setCategory, 'data-category': 'Category 2' },
+            { className: this.active(this.props.category, "Category 2"), onClick: this.props.setCategory, 'data-category': 'Category 2' },
             '#Category 2'
           ),
           _react2.default.createElement(
             'li',
-            { onClick: this.props.setCategory, 'data-category': 'Category 3' },
+            { className: this.active(this.props.category, "Category 3"), onClick: this.props.setCategory, 'data-category': 'Category 3' },
             '#Category 3'
           )
         )

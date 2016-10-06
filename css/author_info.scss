@@ -22,6 +22,8 @@
       border: 2px black solid;
       box-shadow: none;
       padding: 10px 25px;
+      transition: background-color 0.5s ease;
+      transition: color 0.25s ease;
       &:hover {
         background: black;
         color: white;
