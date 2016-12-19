@@ -6,7 +6,9 @@
   left: 0;
   top: 0;
   .authorInfo {
+    height: 30%;
     padding: 0 .5em;
+    position: relative;
     text-align: center;
     .authorImg {
       border-color: #d4d4d4;
@@ -28,42 +30,6 @@
         background: black;
         color: white;
       }
-    }
-    .socialLinks {
-      margin-top: 3em;
-      position: fixed;
-      bottom: 0;
-      margin: 1em auto;
-      width: 23%;
-      li {
-        a {
-          color: black;
-          cursor: pointer;
-          &:hover, &:visited, &:active {
-            color: black;
-          }
-          span {
-            background-size: cover;
-            display: block;
-            float: left;
-            height: 18px;
-            margin: 0 .5em;
-            width: 18px;
-          }
-        }
-      }
-    }
-    .twitterLink a span{
-      background-image: url(../img/twitter.png);
-    }
-    .githubLink a span{
-      background-image: url(../img/github.png);
-    }
-    .linkedInLink a span{
-      background-image: url(../img/linkedin.png);
-    }
-    .contactLink a span{
-      background-image: url(../img/contact.png);
     }
   }
 }

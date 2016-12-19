@@ -1,23 +1,21 @@
 .categories-list {
   margin: 2em 1.5% 0 1.5%;
   height: 20px;
-  li:first-child {
-    padding-left: 0px;
-  }
   li {
+    border-radius: 25px;
+    border: 1px #333 solid;
     cursor: pointer;
     font-weight: 600;
     margin-right: 20px;
+    padding: 3px 30px;
     &.active {
-      background-color: #000;
+      background-color: #333;
       color: white;
-      padding: 3px 30px;
-      border-radius: 25px;
     }
   }
 }
 #blog-posts{
-  .post {
+  .post-resume {
     border-bottom: 2px #D4D7D7 solid;
     color: #000;
     float:left;
@@ -39,6 +37,45 @@
       .category-link {
       	cursor: pointer;
       }
+    }
+  }
+}
+
+.post {
+  color: #000;
+  float:left;
+  margin: 0 1.5%;
+  padding: 15px 0;
+  width: 97%;
+  .post-title {
+    color: #000;
+    cursor: pointer;
+    font-size: 18px;
+    font-size: 20px;
+    line-height: 1.15em;
+  }
+  ul {
+    font-size: 12px;
+    .category-link {
+      cursor: pointer;
+    }
+  }
+  .post-content {
+    .post-imageAttached {
+      text-align: center;
+    }
+  }
+  .post-goBack {
+    background: white;
+    border: 1px #333 solid;
+    border-radius: 100px;
+    margin-top: 50px;
+    padding: 3px 15px;
+    transition: background-color 0.5s ease;
+    transition: color 0.25s ease;
+    &:hover {
+      background-color: #333;
+      color: white;
     }
   }
 }

@@ -1,5 +1,41 @@
 .footer {
-  position: fixed;
+  position: absolute;
   bottom: 0;
-  text-align: right;
+  width: 100%;
+  .socialLinks {
+    border-bottom: 1px #ccc solid;
+    margin-top: 3em;
+    margin: 1em auto;
+    width: 100%;
+    li {
+      width: 28%;
+      a {
+        color: black;
+        cursor: pointer;
+        &:hover, &:visited, &:active {
+          color: black;
+        }
+        span {
+          background-size: cover;
+          display: block;
+          float: left;
+          height: 18px;
+          margin: 0 .15em;
+          width: 18px;
+        }
+      }
+    }
+  }
+  .twitterLink a span{
+    background-image: url(../img/twitter.png);
+  }
+  .githubLink a span{
+    background-image: url(../img/github.png);
+  }
+  .linkedInLink a span{
+    background-image: url(../img/linkedin.png);
+  }
+  .contactLink a span{
+    background-image: url(../img/contact.png);
+  }
 }

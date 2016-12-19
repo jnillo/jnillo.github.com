@@ -5822,7 +5822,9 @@ button.close {
   left: 0;
   top: 0; }
   .infoSide .authorInfo {
+    height: 30%;
     padding: 0 .5em;
+    position: relative;
     text-align: center; }
     .infoSide .authorInfo .authorImg {
       border-color: #d4d4d4;
@@ -5842,32 +5844,6 @@ button.close {
       .infoSide .authorInfo button:hover {
         background: black;
         color: white; }
-    .infoSide .authorInfo .socialLinks {
-      margin-top: 3em;
-      position: fixed;
-      bottom: 0;
-      margin: 1em auto;
-      width: 23%; }
-      .infoSide .authorInfo .socialLinks li a {
-        color: black;
-        cursor: pointer; }
-        .infoSide .authorInfo .socialLinks li a:hover, .infoSide .authorInfo .socialLinks li a:visited, .infoSide .authorInfo .socialLinks li a:active {
-          color: black; }
-        .infoSide .authorInfo .socialLinks li a span {
-          background-size: cover;
-          display: block;
-          float: left;
-          height: 18px;
-          margin: 0 .5em;
-          width: 18px; }
-    .infoSide .authorInfo .twitterLink a span {
-      background-image: url(../img/twitter.png); }
-    .infoSide .authorInfo .githubLink a span {
-      background-image: url(../img/github.png); }
-    .infoSide .authorInfo .linkedInLink a span {
-      background-image: url(../img/linkedin.png); }
-    .infoSide .authorInfo .contactLink a span {
-      background-image: url(../img/contact.png); }
 
 .navbar {
   height: 100px;
@@ -5894,45 +5870,178 @@ button.close {
       .navbar ul.nav li:first-child {
         margin-left: 0; }
 
+.profile-header .profile-navbar ul {
+  margin: 0;
+  padding: 0;
+  overflow: hidden; }
+  .profile-header .profile-navbar ul li {
+    color: black;
+    cursor: pointer;
+    display: block;
+    float: left;
+    padding: 5px 20px;
+    position: relative;
+    text-decoration: none; }
+    .profile-header .profile-navbar ul li.active {
+      color: white; }
+      .profile-header .profile-navbar ul li.active::before, .profile-header .profile-navbar ul li.active::after {
+        background: black; }
+    .profile-header .profile-navbar ul li::before, .profile-header .profile-navbar ul li::after {
+      border-right: 1px solid black;
+      content: " ";
+      display: block;
+      height: 50%;
+      position: absolute;
+      left: 0;
+      right: -10px;
+      top: 0;
+      transform: skewX(45deg);
+      z-index: -1; }
+    .profile-header .profile-navbar ul li::after {
+      bottom: 0;
+      top: auto;
+      transform: skewX(-45deg); }
+    .profile-header .profile-navbar ul li:first-child {
+      margin-left: 7px; }
+
+.profile-section {
+  height: 300px;
+  overflow-x: hidden;
+  overflow-y: scroll; }
+  .profile-section img {
+    margin-top: 25%;
+    margin-left: 10%;
+    max-width: 150px; }
+  .profile-section h3 {
+    font-weight: bold; }
+
+.profile-contact {
+  height: 200px; }
+  .profile-contact ul li {
+    margin: 10px 0;
+    width: 100%; }
+    .profile-contact ul li a {
+      color: black;
+      font-size: 18px;
+      text-decoration: none; }
+    .profile-contact ul li.social-network {
+      float: left;
+      margin-right: 20px;
+      width: auto; }
+  .profile-contact span.error {
+    clear: both;
+    width: 100%; }
+  .profile-contact .check-bot img {
+    display: block;
+    margin: 10px auto; }
+  .profile-contact .check-bot input {
+    border-radius: 5px;
+    padding: 5px;
+    width: 75%;
+    border: 1px #ccc solid; }
+  .profile-contact .check-bot button {
+    background: black;
+    color: white;
+    border-radius: 5px;
+    padding: 5px;
+    width: 20%;
+    border: 1px #ccc solid; }
+
 .footer {
-  position: fixed;
+  position: absolute;
   bottom: 0;
-  text-align: right; }
+  width: 100%; }
+  .footer .socialLinks {
+    border-bottom: 1px #ccc solid;
+    margin-top: 3em;
+    margin: 1em auto;
+    width: 100%; }
+    .footer .socialLinks li {
+      width: 28%; }
+      .footer .socialLinks li a {
+        color: black;
+        cursor: pointer; }
+        .footer .socialLinks li a:hover, .footer .socialLinks li a:visited, .footer .socialLinks li a:active {
+          color: black; }
+        .footer .socialLinks li a span {
+          background-size: cover;
+          display: block;
+          float: left;
+          height: 18px;
+          margin: 0 .15em;
+          width: 18px; }
+  .footer .twitterLink a span {
+    background-image: url(../img/twitter.png); }
+  .footer .githubLink a span {
+    background-image: url(../img/github.png); }
+  .footer .linkedInLink a span {
+    background-image: url(../img/linkedin.png); }
+  .footer .contactLink a span {
+    background-image: url(../img/contact.png); }
 
 .categories-list {
   margin: 2em 1.5% 0 1.5%;
   height: 20px; }
-  .categories-list li:first-child {
-    padding-left: 0px; }
   .categories-list li {
+    border-radius: 25px;
+    border: 1px #333 solid;
     cursor: pointer;
     font-weight: 600;
-    margin-right: 20px; }
+    margin-right: 20px;
+    padding: 3px 30px; }
     .categories-list li.active {
-      background-color: #000;
-      color: white;
-      padding: 3px 30px;
-      border-radius: 25px; }
+      background-color: #333;
+      color: white; }
 
-#blog-posts .post {
+#blog-posts .post-resume {
   border-bottom: 2px #D4D7D7 solid;
   color: #000;
   float: left;
   margin: 0 1.5%;
   padding: 15px 0px;
   width: 30%; }
-  #blog-posts .post.last {
+  #blog-posts .post-resume.last {
     width: 97%; }
-  #blog-posts .post .post-title {
+  #blog-posts .post-resume .post-title {
     color: #000;
     cursor: pointer;
     font-size: 18px;
     font-size: 20px;
     line-height: 1.15em; }
-  #blog-posts .post ul {
+  #blog-posts .post-resume ul {
     font-size: 12px; }
-    #blog-posts .post ul .category-link {
+    #blog-posts .post-resume ul .category-link {
       cursor: pointer; }
+
+.post {
+  color: #000;
+  float: left;
+  margin: 0 1.5%;
+  padding: 15px 0;
+  width: 97%; }
+  .post .post-title {
+    color: #000;
+    cursor: pointer;
+    font-size: 18px;
+    font-size: 20px;
+    line-height: 1.15em; }
+  .post ul {
+    font-size: 12px; }
+    .post ul .category-link {
+      cursor: pointer; }
+  .post .post-content .post-imageAttached {
+    text-align: center; }
+  .post .post-goBack {
+    background: white;
+    border: 1px #333 solid;
+    border-radius: 100px;
+    margin-top: 50px;
+    padding: 3px 15px;
+    transition: background-color 0.5s ease;
+    transition: color 0.25s ease; }
+    .post .post-goBack:hover {
+      background-color: #333;
+      color: white; }
 
 body {
   background: #f9f9f9 url(../img/subtle_dots.png) repeat; }
