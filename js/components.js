@@ -881,7 +881,7 @@ var Contact = function (_React$Component) {
     value: function render() {
       return _react2.default.createElement(
         'div',
-        { id: 'contact', className: 'profile-contact' },
+        { id: 'contact', className: 'profile-contact  col-md-12' },
         _react2.default.createElement(
           'h2',
           null,
@@ -939,7 +939,7 @@ var ProfileBody = function (_React$Component) {
     value: function loadSummary() {
       return _react2.default.createElement(
         "div",
-        { className: "profile-section" },
+        { className: "profile-section col-md-12" },
         _react2.default.createElement(
           "h2",
           null,
@@ -957,7 +957,7 @@ var ProfileBody = function (_React$Component) {
     value: function loadBackend() {
       return _react2.default.createElement(
         "div",
-        { className: "profile-section" },
+        { className: "profile-section col-md-12" },
         _react2.default.createElement(
           "h2",
           null,
@@ -1014,7 +1014,7 @@ var ProfileBody = function (_React$Component) {
     value: function loadFrontend() {
       return _react2.default.createElement(
         "div",
-        { className: "profile-section" },
+        { className: "profile-section  col-xs-12" },
         _react2.default.createElement(
           "h2",
           null,
@@ -1022,7 +1022,7 @@ var ProfileBody = function (_React$Component) {
         ),
         _react2.default.createElement(
           "div",
-          { className: "col-md-3 col-xs-12" },
+          { className: "col-md-3" },
           _react2.default.createElement("img", {
             src: "https://s3.amazonaws.com/media-p.slid.es/uploads/espenhovlandsdal/images/566501/react-logo-colored.png",
             alt: "ReactJS" })
@@ -1060,7 +1060,11 @@ var ProfileBody = function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
-      return this.loadSection();
+      return _react2.default.createElement(
+        "div",
+        { className: "row" },
+        this.loadSection()
+      );
     }
   }]);
 
@@ -1119,7 +1123,11 @@ var ProfileHeader = function (_React$Component) {
           { className: 'section-title' },
           'About'
         ),
-        _react2.default.createElement(_profile_navbar2.default, { changeSection: this.props.changeSection, section: this.props.section })
+        _react2.default.createElement(
+          'div',
+          { className: 'row' },
+          _react2.default.createElement(_profile_navbar2.default, { changeSection: this.props.changeSection, section: this.props.section })
+        )
       );
     }
   }]);
@@ -1170,7 +1178,7 @@ var ProfileNavbar = function (_React$Component) {
     value: function render() {
       return _react2.default.createElement(
         "div",
-        { className: "profile-navbar" },
+        { className: "profile-navbar col-md-12" },
         _react2.default.createElement(
           "ul",
           { className: "list-inline" },
