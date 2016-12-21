@@ -128,8 +128,12 @@ var Blog = function (_React$Component) {
 
     var _this = _possibleConstructorReturn(this, (Blog.__proto__ || Object.getPrototypeOf(Blog)).call(this, props));
 
-    _this.state = { category: 'All' };
+    _this.state = {
+      category: 'All',
+      search: null
+    };
     _this.setCategory = _this.setCategory.bind(_this);
+    _this.searchPosts = _this.searchPosts.bind(_this);
     return _this;
   }
 
@@ -139,13 +143,18 @@ var Blog = function (_React$Component) {
       this.setState({ category: event.target.getAttribute('data-category') });
     }
   }, {
+    key: 'searchPosts',
+    value: function searchPosts(event) {
+      this.setState({ search: event.target.value });
+    }
+  }, {
     key: 'render',
     value: function render() {
       return _react2.default.createElement(
         'div',
         { className: 'content col-md-9 col-xs-12' },
-        _react2.default.createElement(_blog_header2.default, { category: this.state.category, setCategory: this.setCategory }),
-        _react2.default.createElement(_blog_body2.default, { category: this.state.category, setCategory: this.setCategory })
+        _react2.default.createElement(_blog_header2.default, { category: this.state.category, setCategory: this.setCategory, searchPosts: this.searchPosts }),
+        _react2.default.createElement(_blog_body2.default, { category: this.state.category, setCategory: this.setCategory, search: this.state.search })
       );
     }
   }]);
@@ -212,6 +221,7 @@ var BlogBody = function (_React$Component) {
         posts: blog.posts,
         category: this.props.category,
         setCategory: this.props.setCategory,
+        search: this.props.search,
         goToPost: this.goToPost });
     }
   }, {
@@ -301,6 +311,11 @@ var BlogHeader = function (_React$Component) {
           'Blog'
         ),
         _react2.default.createElement(
+          'div',
+          { className: 'posts-searcher' },
+          _react2.default.createElement('input', { type: 'text', placeholder: 'Search', onChange: this.props.searchPosts })
+        ),
+        _react2.default.createElement(
           'ul',
           { className: 'list-inline categories-list' },
           _react2.default.createElement(
@@ -336,6 +351,7 @@ exports.default = BlogHeader;
 
 BlogHeader.propTypes = {
   setCategory: _react2.default.PropTypes.func.isRequired,
+  searchPosts: _react2.default.PropTypes.func.isRequired,
   category: _react2.default.PropTypes.string.isRequired
 };
 
@@ -550,11 +566,11 @@ var Posts = function (_React$Component) {
 
   _createClass(Posts, [{
     key: 'postsByCategory',
-    value: function postsByCategory(posts, category) {
+    value: function postsByCategory(posts, category, search) {
       var categoryPosts = [];
       for (var index = 0; index < posts.length; index++) {
         if (category == "All" || posts[index].category == category) {
-          categoryPosts.push(posts[index]);
+          if (search === null || posts[index].title.indexOf(search) >= 0) categoryPosts.push(posts[index]);
         }
       }
       return categoryPosts;
@@ -562,15 +578,21 @@ var Posts = function (_React$Component) {
   }, {
     key: 'renderPosts',
     value: function renderPosts(posts, setCategory, goToPost) {
-      return posts.map(function (post, index) {
-        return _react2.default.createElement(_post_resume2.default, {
-          postIndex: index,
-          post: post,
-          key: post.title,
-          setCategory: setCategory,
-          lastPost: posts[0] == post,
-          goToPost: goToPost });
-      });
+      if (posts.length === 0) return _react2.default.createElement(
+        'p',
+        { className: 'posts-empty' },
+        'Sorry, no posts found.'
+      );else {
+        return posts.map(function (post, index) {
+          return _react2.default.createElement(_post_resume2.default, {
+            postIndex: index,
+            post: post,
+            key: post.title,
+            setCategory: setCategory,
+            lastPost: posts[0] == post,
+            goToPost: goToPost });
+        });
+      }
     }
   }, {
     key: 'setCategory',
@@ -580,10 +602,11 @@ var Posts = function (_React$Component) {
   }, {
     key: 'render',
     value: function render() {
+      var posts = this.postsByCategory(this.props.posts, this.props.category, this.props.search);
       return _react2.default.createElement(
         'div',
         { id: 'blog-posts' },
-        this.renderPosts(this.postsByCategory(this.props.posts, this.props.category), this.props.setCategory, this.props.goToPost)
+        this.renderPosts(posts, this.props.setCategory, this.props.goToPost)
       );
     }
   }]);
@@ -597,6 +620,7 @@ exports.default = Posts;
 Posts.propTypes = {
   posts: _react2.default.PropTypes.array,
   category: _react2.default.PropTypes.string,
+  search: _react2.default.PropTypes.string,
   setCategory: _react2.default.PropTypes.func.isRequired,
   goToPost: _react2.default.PropTypes.func.isRequired
 };
@@ -1319,12 +1343,16 @@ var AuthorInfo = function (_React$Component) {
           'div',
           { className: 'authorInfo' },
           _react2.default.createElement('img', {
+            onClick: this.props.changePage,
+            'data-goTo': 'blog',
             src: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Anonymous_emblem.svg/2000px-Anonymous_emblem.svg.png',
             className: 'authorImg'
           }),
           _react2.default.createElement(
             'h2',
-            null,
+            {
+              onClick: this.props.changePage,
+              'data-goTo': 'blog' },
             'Juan Vazquez'
           ),
           _react2.default.createElement(

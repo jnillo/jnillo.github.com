@@ -38,6 +38,10 @@
         }
         &:first-child{
       	  margin-left: 7px;
+          padding-left: 0;
+          &.active{
+            padding-left: 15px;
+          }
         }
       }
     }

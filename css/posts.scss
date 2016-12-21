@@ -1,6 +1,26 @@
+.posts-searcher{
+  height: 120px;
+  width: 40%;
+  float: right;
+  padding-top: 65px;
+  vertical-align: middle;
+  input {
+    border-radius: 5px;
+    border: 1px #ccc solid;
+    padding: 10px 15px;
+    width: 100%;
+  }
+}
+.posts-empty{
+  margin-top: 50px;
+  font-size: 18px;
+}
+
 .categories-list {
-  margin: 50px 1.5% 20px 1.5%;
+  clear: both;
+  margin: 50px 0 20px 0;
   height: 20px;
+  width: 100%;
   li {
     border-radius: 25px;
     border: 1px #333 solid;

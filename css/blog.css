@@ -5903,7 +5903,10 @@ button.close {
       top: auto;
       transform: skewX(-45deg); }
     .profile-header .profile-navbar ul li:first-child {
-      margin-left: 7px; }
+      margin-left: 7px;
+      padding-left: 0; }
+      .profile-header .profile-navbar ul li:first-child.active {
+        padding-left: 15px; }
 
 .profile-section {
   height: 300px;
@@ -6004,9 +6007,27 @@ li.linkedInLink a span {
 li.contactLink a span {
   background-image: url(../img/contact.png); }
 
+.posts-searcher {
+  height: 120px;
+  width: 40%;
+  float: right;
+  padding-top: 65px;
+  vertical-align: middle; }
+  .posts-searcher input {
+    border-radius: 5px;
+    border: 1px #ccc solid;
+    padding: 10px 15px;
+    width: 100%; }
+
+.posts-empty {
+  margin-top: 50px;
+  font-size: 18px; }
+
 .categories-list {
-  margin: 50px 1.5% 20px 1.5%;
-  height: 20px; }
+  clear: both;
+  margin: 50px 0 20px 0;
+  height: 20px;
+  width: 100%; }
   .categories-list li {
     border-radius: 25px;
     border: 1px #333 solid;
@@ -6077,6 +6098,11 @@ body {
   margin-left: 25%; }
 
 .section-title {
-  font-weight: bold;
+  display: block;
+  float: left;
   font-size: 100px;
-  padding-left: 7px; }
+  font-weight: bold;
+  height: 120px;
+  overflow: hidden;
+  padding-left: 0px;
+  width: 60%; }
