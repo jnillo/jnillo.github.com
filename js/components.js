@@ -710,7 +710,7 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var quizz = ['How many plannets are in our Solar System?', 'What is my name?', 'How many fingers has a hand?'];
+var quizz = ['How many plannets are there in our Solar System?', 'What is my name?', 'How many fingers has a hand?'];
 var solutions = ['9', 'Juan', '5'];
 
 var Contact = function (_React$Component) {
@@ -725,7 +725,7 @@ var Contact = function (_React$Component) {
       question: Math.floor(Math.random() * 3),
       answered: false,
       reply: null,
-      attemps: 0
+      attemps: 3
     };
     _this.checkAnswer = _this.checkAnswer.bind(_this);
     _this.contactInfo = _this.contactInfo.bind(_this);
@@ -743,7 +743,7 @@ var Contact = function (_React$Component) {
       this.setState({ attemps: this.state.attemps + 1 });
       if (this.state.attemps < 3) $('span#error').html('<b>Come on! You can do it better. Try again!</b>');else $('.check-bot').html('\
         <p>Sorry! I can´t show you my contact because I am not sure if you belong to the darkside.</p>\
-        <img src="http://silhouettesfree.com/movies/star-wars/darth-vader-mask-silhouette-image-2.png" alt="DarkVader">\
+        <img src="/img/dark-vader.png" alt="DarkVader">\
       ');
     }
   }, {
@@ -764,7 +764,13 @@ var Contact = function (_React$Component) {
         _react2.default.createElement(
           'p',
           null,
-          'I need know that you arent another bot searching random emails. So before to show you my personal email I need you answer me a quick question.'
+          'I need know that you are not another ',
+          _react2.default.createElement(
+            'span',
+            null,
+            'bot searching random emails'
+          ),
+          '. So before to show you my personal email I need you answer me a quick question:'
         ),
         _react2.default.createElement(
           'p',
@@ -799,7 +805,7 @@ var Contact = function (_React$Component) {
             null,
             _react2.default.createElement(
               'a',
-              { href: 'mailto:juan@juanvazquez.me', target: '_blank', rel: 'nofollow' },
+              { className: 'social-network', href: 'mailto:juan@juanvazquez.me', target: '_blank', rel: 'nofollow' },
               _react2.default.createElement(
                 'b',
                 null,
@@ -810,31 +816,31 @@ var Contact = function (_React$Component) {
           ),
           _react2.default.createElement(
             'li',
-            { className: 'social-network' },
+            { className: 'social-network linkedInLink' },
             _react2.default.createElement(
               'a',
               { href: 'http://ie.linkedin.com/in/juanvazquezmurga', target: '_blank', rel: 'nofollow' },
-              _react2.default.createElement('i', { className: 'fa fa-linkedin' }),
+              _react2.default.createElement('span', null),
               'LinkedIn'
             )
           ),
           _react2.default.createElement(
             'li',
-            { className: 'social-network' },
+            { className: 'social-network twitterLink' },
             _react2.default.createElement(
               'a',
               { href: 'http://twitter.com/jnillo9', target: '_blank', rel: 'nofollow' },
-              _react2.default.createElement('i', { className: 'fa fa-twitter' }),
+              _react2.default.createElement('span', null),
               'Twitter'
             )
           ),
           _react2.default.createElement(
             'li',
-            { className: 'social-network' },
+            { className: 'social-network githubLink' },
             _react2.default.createElement(
               'a',
               { href: 'http://github.com/jnillo', target: '_blank', rel: 'nofollow' },
-              _react2.default.createElement('i', { className: 'fa fa-github' }),
+              _react2.default.createElement('span', null),
               'GitHub'
             )
           )

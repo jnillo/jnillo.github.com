@@ -15,27 +15,32 @@
         &:hover, &:visited, &:active {
           color: black;
         }
-        span {
-          background-size: cover;
-          display: block;
-          float: left;
-          height: 18px;
-          margin: 0 .15em;
-          width: 18px;
-        }
       }
     }
   }
-  .twitterLink a span{
-    background-image: url(../img/twitter.png);
-  }
-  .githubLink a span{
-    background-image: url(../img/github.png);
-  }
-  .linkedInLink a span{
-    background-image: url(../img/linkedin.png);
-  }
-  .contactLink a span{
-    background-image: url(../img/contact.png);
-  }
+}
+
+.twitterLink a span,
+.githubLink a span,
+.linkedInLink a span,
+.contactLink a span {
+  background-size: cover;
+  display: block;
+  float: left;
+  height: 18px;
+  margin: 0px 5px 5px 0px;
+  width: 18px;
+}
+
+li.twitterLink a span{
+  background-image: url(../img/twitter.png);
+}
+li.githubLink a span{
+  background-image: url(../img/github.png);
+}
+li.linkedInLink a span{
+  background-image: url(../img/linkedin.png);
+}
+li.contactLink a span{
+  background-image: url(../img/contact.png);
 }

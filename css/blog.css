@@ -5871,7 +5871,7 @@ button.close {
         margin-left: 0; }
 
 .profile-header .profile-navbar ul {
-  margin: 0;
+  margin: 20px 0 30px 0;
   padding: 0;
   overflow: hidden; }
   .profile-header .profile-navbar ul li {
@@ -5879,13 +5879,14 @@ button.close {
     cursor: pointer;
     display: block;
     float: left;
-    padding: 5px 20px;
+    padding: 5px 15px 5px 25px;
     position: relative;
     text-decoration: none; }
     .profile-header .profile-navbar ul li.active {
-      color: white; }
+      color: white;
+      padding: 5px 25px; }
       .profile-header .profile-navbar ul li.active::before, .profile-header .profile-navbar ul li.active::after {
-        background: black; }
+        background: #333; }
     .profile-header .profile-navbar ul li::before, .profile-header .profile-navbar ul li::after {
       border-right: 1px solid black;
       content: " ";
@@ -5912,11 +5913,21 @@ button.close {
     margin-top: 25%;
     margin-left: 10%;
     max-width: 150px; }
+  .profile-section h2 {
+    font-weight: bold;
+    margin-bottom: 20px; }
+  .profile-section p {
+    font-size: 16px;
+    line-height: 24px; }
   .profile-section h3 {
-    font-weight: bold; }
+    margin-bottom: 20px; }
 
 .profile-contact {
-  height: 200px; }
+  height: 200px;
+  margin: 50px 0 30px 0; }
+  .profile-contact h2 {
+    font-weight: bold;
+    margin-bottom: 20px; }
   .profile-contact ul li {
     margin: 10px 0;
     width: 100%; }
@@ -5931,16 +5942,22 @@ button.close {
   .profile-contact span.error {
     clear: both;
     width: 100%; }
+  .profile-contact .check-bot p {
+    line-height: 24px;
+    margin-top: 15px;
+    font-size: 16px; }
+    .profile-contact .check-bot p span {
+      font-weight: bold; }
   .profile-contact .check-bot img {
     display: block;
     margin: 10px auto; }
   .profile-contact .check-bot input {
     border-radius: 5px;
+    border: 1px #ccc solid;
     padding: 5px;
-    width: 75%;
-    border: 1px #ccc solid; }
+    width: 75%; }
   .profile-contact .check-bot button {
-    background: black;
+    background: #333;
     color: white;
     border-radius: 5px;
     padding: 5px;
@@ -5963,24 +5980,32 @@ button.close {
         cursor: pointer; }
         .footer .socialLinks li a:hover, .footer .socialLinks li a:visited, .footer .socialLinks li a:active {
           color: black; }
-        .footer .socialLinks li a span {
-          background-size: cover;
-          display: block;
-          float: left;
-          height: 18px;
-          margin: 0 .15em;
-          width: 18px; }
-  .footer .twitterLink a span {
-    background-image: url(../img/twitter.png); }
-  .footer .githubLink a span {
-    background-image: url(../img/github.png); }
-  .footer .linkedInLink a span {
-    background-image: url(../img/linkedin.png); }
-  .footer .contactLink a span {
-    background-image: url(../img/contact.png); }
+
+.twitterLink a span,
+.githubLink a span,
+.linkedInLink a span,
+.contactLink a span {
+  background-size: cover;
+  display: block;
+  float: left;
+  height: 18px;
+  margin: 0px 5px 5px 0px;
+  width: 18px; }
+
+li.twitterLink a span {
+  background-image: url(../img/twitter.png); }
+
+li.githubLink a span {
+  background-image: url(../img/github.png); }
+
+li.linkedInLink a span {
+  background-image: url(../img/linkedin.png); }
+
+li.contactLink a span {
+  background-image: url(../img/contact.png); }
 
 .categories-list {
-  margin: 2em 1.5% 0 1.5%;
+  margin: 50px 1.5% 20px 1.5%;
   height: 20px; }
   .categories-list li {
     border-radius: 25px;
@@ -5998,7 +6023,7 @@ button.close {
   color: #000;
   float: left;
   margin: 0 1.5%;
-  padding: 15px 0px;
+  padding: 15px 0px 30px 0;
   width: 30%; }
   #blog-posts .post-resume.last {
     width: 97%; }
@@ -6007,9 +6032,11 @@ button.close {
     cursor: pointer;
     font-size: 18px;
     font-size: 20px;
-    line-height: 1.15em; }
+    line-height: 1.15em;
+    margin-bottom: 20px; }
   #blog-posts .post-resume ul {
-    font-size: 12px; }
+    font-size: 12px;
+    margin-bottom: 20px; }
     #blog-posts .post-resume ul .category-link {
       cursor: pointer; }
 
