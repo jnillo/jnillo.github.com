@@ -53,7 +53,7 @@ var Editor = function (_React$Component) {
     var _this = _possibleConstructorReturn(this, (Editor.__proto__ || Object.getPrototypeOf(Editor)).call(this, props));
 
     _this.state = {
-      text: "// Content"
+      text: "Write something amazing..."
     };
     _this.updateContent = _this.updateContent.bind(_this);
     return _this;
