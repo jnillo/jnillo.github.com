@@ -1,19 +1,56 @@
 /* Text Elements */
 
-p.paragraph.paragraph-1 {
-  float: right;
+.header, .paragraph {
+  font-family: 'Roboto', cursive;
+  font-variant: small-caps;
 }
 
-p.paragraph span.paragraph-text-1 {
-  font-size: .875rem;
+p.paragraph.paragraph-1 {
+  float: right;
+  text-align: right;
+}
+
+p.paragraph.paragraph-1 span{
+  font-size: 1.2em;
+  font-weight: bold;
 }
 
 span.text-element.text-3 {
   display: block;
   font-style: normal;
-  font-variant: small-caps;
   font-size: 18px;
   font-family: 'Roboto', cursive;
+}
+
+span.highlight {
+  font-weight: bold;
+}
+
+.
+
+p.paragraph {
+  margin-bottom: 0px;
+}
+
+p.paragraph.paragraph-1 {
+  float: right;
+  clear: none;
+  width: 161px;
+  margin-bottom: 3px;
+}
+
+p.paragraph-2, p.paragraph-3 {
+  text-align: right;
+  margin: 0 0 3px 0;
+}
+
+p.paragraph-2 a, p.paragraph-2 a:hover {
+  color: #373a3c;
+  text-decoration: none;
+}
+
+.social-image img{
+  width: 22px;
 }
 
 /* Layout Elements */
@@ -60,7 +97,7 @@ body.main-grid {
 .container-grid.footer {
   display: block;
   float: right;
-  padding: 30px;
+  padding: 0 30px 0px;
   width: auto;
   background-color: transparent;
 

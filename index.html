@@ -49,21 +49,35 @@
   <div class="header container-grid">
     <span class="text-element text-3">Juan Vázquez Murga - Software Developer</span>
     <div class="container-grid container-1">
-      <p class="paragraph">Currently working with&nbsp; <span id="currently"></span></p>
+      <p class="paragraph">Currently working with&nbsp; <span id="currently" class="highlight"></span></p>
     </div>
   </div>
   <div class="container-grid footer">
     <div class="container-grid container-2">
-      <p class="paragraph paragraph-1"><span class="paragraph-text-1">juan@juanvazquez.me</span>
+      <p class="paragraph paragraph-1"><span class="paragraph-text-1">Contact</span>
       </p>
-      <p class="paragraph"></p>
+      <p class="paragraph paragraph-2">
+        <a href="mailto:juan@juanvazquez.me" target="_blank">
+          <span class="paragraph-text-3">juan@juanvazquez.me</span>
+        </a>
+      </p>
+      <p class="paragraph paragraph-3">
+        <a href="https://twitter.com/jnillo9" target="_blank" class="social-image social-icon-1">
+          <img class="generic-icon" src="./img/twitter.png" alt="Twitter">
+        </a>
+        <a href="https://www.linkedin.com/in/juanvazquezmurga/" target="_blank" class="social-image social-icon-1">
+          <img class="generic-icon" src="./img/linkedin.png" alt="Linkedin">
+        </a>
+      </p>
     </div>
   </div>
   <script src="js/typed.min.js"></script>
   <script>
     var typed = new Typed('#currently', {
     strings: ["Ruby on Rails.", "Elixir.", "Phoenix."],
-    typeSpeed: 30
+    loop: true,
+    typeSpeed: 60,
+    backDelay: 1000
    });
   </script>
 </body>
