@@ -1,16 +1,70 @@
 <!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+
+
+	<!-- Favicon -->
+	<link rel="icon" type="image/png" href="images/favicon.png" sizes="32x32">
+
+
+	<meta name="viewport" content="width=device-width,initial-scale=1" />
+
+</head>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Juan Vázquez :: Senior Sofware Developer</title>
-    <link href="css/blog.css" rel="stylesheet">
-  </head>
-  <body>
-    <div id='homepage'></div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/components.js"></script>
-  </body>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"><!-- SEO -->
+  <title>Juan Vázquez Murga - Software Developer and more...</title>
+
+  <meta name="description" content="I invented Lorem Ipsum coming back to home a Saturday night. I usually write on Medium and sometimes in Twitter." />
+  <meta name="robots" content="index, follow" />
+  <meta name="referrer" content="always" />
+
+	<!-- Social & Open Graph -->
+  <meta property="og:title" content="Juan Vázquez Murga - Software Developer and more...o" />
+  <meta property="og:description" content="I invented Lorem Ipsum coming back to home a Saturday night. I usually write on Medium and sometimes in Twitter." />
+  <meta property="og:image" content="https://demo.onepagelove.com/fullsingle-html/me/images/social.jpg"> <!-- include your hosted image full URL -->
+  <meta property="og:url" content="https://demo.onepagelove.com/fullsingle-html/me/" />
+  <meta name="twitter:title" content="Juan Vázquez Murga - Software Developer and more..." >
+  <meta name="twitter:description" content="I invented Lorem Ipsum coming back to home a Saturday night. I usually write on Medium and sometimes in Twitter." />
+  <meta name="twitter:image" content="https://demo.onepagelove.com/fullsingle-html/me/images/social.jpg" /> <!-- include your hosted image full URL -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@onepagelove" />
+  <meta name="twitter:creator" content="@robhope" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/bootstrap4.min.css">
+  <link rel="stylesheet" href="css/wireframe-theme.min.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+
+</head>
+<body class="main-grid">
+  <div class="header container-grid">
+    <span class="text-element text-3">Juan Vázquez Murga - Software Developer</span>
+    <div class="container-grid container-1">
+      <p class="paragraph">Currently working with&nbsp; <span id="currently"></span></p>
+    </div>
+  </div>
+  <div class="container-grid footer">
+    <div class="container-grid container-2">
+      <p class="paragraph paragraph-1"><span class="paragraph-text-1">juan@juanvazquez.me</span>
+      </p>
+      <p class="paragraph"></p>
+    </div>
+  </div>
+  <script src="js/typed.min.js"></script>
+  <script>
+    var typed = new Typed('#currently', {
+    strings: ["Ruby on Rails.", "Elixir.", "Phoenix."],
+    typeSpeed: 30
+   });
+  </script>
+</body>
 </html>
